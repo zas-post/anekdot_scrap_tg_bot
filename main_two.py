@@ -29,14 +29,13 @@ def get_first_anekdot():
 
         print(f"{article_id_data} | {anekdot_data}")
 
-
-        dict_for_anekdots[article_id_data] = {
+        if anekdot_data and article_id_data:
+            dict_for_anekdots[article_id_data] = {
             "article_anekdot": anekdot_data
         }
 
-        if anekdot_data and article_id_data is not None:
-            with open("dict_for_anekdot.json", "w", encoding="utf-8") as file:
-                json.dump(dict_for_anekdots, file, indent=4, ensure_ascii=False)
+    with open("dict_for_anekdot.json", "w", encoding="utf-8") as file:
+        json.dump(dict_for_anekdots, file, indent=4, ensure_ascii=False)
 
 
 def check_new_anekdot():
