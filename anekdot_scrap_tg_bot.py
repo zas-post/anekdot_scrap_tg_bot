@@ -7,4 +7,4 @@ dp =Dispatcher(bot)
 
 @dp.message_handler(coma)
 async def start(message: types.Message)
-    await message.reply("Ti kto?")
+    await message.reply("Что то?")
